@@ -47,17 +47,10 @@ from code.small_projects import pascal
 print(pascal(3))  # Output: [1, 3, 3, 1]
 ```
 
-## Key Learnings
-
-- Implemented classic numerical algorithms like the Sieve of Eratosthenes and bisection method.
-- Practiced iterative computation and list manipulation for mathematical problems.
-- Reinforced understanding of approximation techniques for integrals and roots.
-- Explored combinatorial structures with Pascal’s Triangle.
-
 
 ## Testing the Code
 
-All functions include docstrings with usage examples. You can test them using Python’s built-in doctest module:
+Some of the functions include docstrings with usage examples. You can test them using Python’s built-in doctest module:
 
 From the terminal, navigate to the code/ folder and run:
 

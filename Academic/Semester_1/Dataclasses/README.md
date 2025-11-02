@@ -112,11 +112,3 @@ print(date.to_string(d))  # Output: "2025-11-02(00:00:00)"
 ts.skip_second(d.timestamp)
 print(date.to_string(d))  # Output: "2025-11-02(00:00:01)"
 ```
-
-## Key Learnings
-
-- Used dataclasses for clear and concise data structures.
-- Implemented deep copies and equality checks for custom objects.
-- Practiced geometric computations with points and polygons.
-- Explored date arithmetic and validation, integrating time management.
-- Reinforced modularity and reusability in Python projects.

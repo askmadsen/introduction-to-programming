@@ -9,12 +9,10 @@ The exercises cover numbers, lists, strings, and use constructs like loops, cond
 - Python 3.10+
 - Standard libraries only
 
-## List Comprehensions
+## Exercises Included
 
-This module contains exercises using Python **list comprehensions** to perform common operations on numbers, lists, and strings.
 
-### Functions
-
+### 1. List Comprehensions
 - **squares(n)** – Returns the squares of numbers from 1 to n.
 - **decreasing_squares(n)** – Returns squares from n down to 1.
 - **count_divisors(n)** – Counts the number of divisors of n.
@@ -31,27 +29,9 @@ This module contains exercises using Python **list comprehensions** to perform c
 - **multiplication_table(n)** – Returns a multiplication table up to n.
 - **transpose(m)** – Transposes a matrix.
 
-### Example Usage
 
-```python
-from code.list_comprehensions import squares, remove, multiplication_table
 
-print(squares(6))  
-# Output: [1, 4, 9, 16, 25, 36]
-
-print(remove(1, [1,2,1,4,1,3,1]))  
-# Output: [2, 4, 3]
-
-print(multiplication_table(4))  
-# Output: [[1, 2, 3, 4], [2, 4, 6, 8], [3, 6, 9, 12], [4, 8, 12, 16]]
-```
-
-## Numbers
-
-This module contains exercises on imperative programming with numbers.  
-The functions demonstrate loops, conditionals, and arithmetic operations.
-
-### Functions
+### 2. Numeric Computation
 
 - **print_multiples(k, n)** – Prints the multiples of `k` less than or equal to `n`.  
 - **sum_up_to(n)** – Returns the sum of natural numbers from 1 to `n`.  
@@ -70,26 +50,8 @@ The functions demonstrate loops, conditionals, and arithmetic operations.
 - **nth_prime(n)** – Returns the `n`th prime number.  
 - **gcd(m, n)** – Returns the greatest common divisor of `m` and `n`.  
 
-### Example Usage
 
-```python
-from code.imperative_programming_on_numbers import sum_up_to, factorial, is_prime, nth_prime, gcd
-
-print(sum_up_to(10))       # Output: 55
-print(factorial(5))        # Output: 120
-print(is_prime(7))         # Output: True
-print(nth_prime(5))        # Output: 11
-print(gcd(24, 36))         # Output: 12
-```
-
-
-## Lists
-
-This module contains exercises on imperative programming with lists.  
-Functions demonstrate iteration, indexing, conditionals, and basic list manipulations.
-
-### Functions
-
+### 3. List Processing
 - **sum(v)** – Returns the sum of all elements in `v`.  
 - **count(x, v)** – Counts the occurrences of `x` in `v`.  
 - **max(v)** – Returns the maximum element in `v`.  
@@ -132,28 +94,8 @@ Functions demonstrate iteration, indexing, conditionals, and basic list manipula
 - **transpose(m)** – Returns `m` with rows and columns interchanged.  
 - **product(m1, m2)** – Matrix multiplication of `m1` and `m2`.  
 
-### Example Usage
 
-```python
-from code.imperative_programming_on_lists import sum, reverse, sorted_join, multiply
-
-v = [1, 2, 3, 4]
-print(sum(v))                       # Output: 10
-print(reverse(v))                   # Output: [4, 3, 2, 1]
-print(sorted_join([1,3],[2,4]))     # Output: [1, 2, 3, 4]
-m = [[1,2],[3,4]]
-multiply(2, m)
-print(m)                            # Output: [[2, 4], [6, 8]]
-```
-
-
-## Strings
-
-This module contains exercises on imperative programming with strings.  
-Functions demonstrate iteration, indexing, conditionals, and string manipulation.
-
-### Functions
-
+### 4. String Processing
 - **count(c, s)** – Counts occurrences of character `c` in `s`.  
 - **member(c, s)** – Checks if `c` appears in `s`.  
 - **is_prefix(s1, s2)** – Checks if `s1` is a prefix of `s2`.  
@@ -171,7 +113,47 @@ Functions demonstrate iteration, indexing, conditionals, and string manipulation
 - **remove_vowels(s)** – Removes all vowels from `s`.  
 - **respace(s, n)** – Removes all spaces from `s` and inserts a space every `n` characters.
 
-### Example Usage
+
+## Running the Code
+
+All exercises are contained in `code/`. Each function can be imported and tested individually.  
+Example:
+
+```python
+from code.list_comprehensions import squares, remove, multiplication_table
+
+print(squares(6))  
+# Output: [1, 4, 9, 16, 25, 36]
+
+print(remove(1, [1,2,1,4,1,3,1]))  
+# Output: [2, 4, 3]
+
+print(multiplication_table(4))  
+# Output: [[1, 2, 3, 4], [2, 4, 6, 8], [3, 6, 9, 12], [4, 8, 12, 16]]
+```
+
+```python
+from code.imperative_programming_on_numbers import sum_up_to, factorial, is_prime, nth_prime, gcd
+
+print(sum_up_to(10))       # Output: 55
+print(factorial(5))        # Output: 120
+print(is_prime(7))         # Output: True
+print(nth_prime(5))        # Output: 11
+print(gcd(24, 36))         # Output: 12
+```
+
+```python
+from code.imperative_programming_on_lists import sum, reverse, sorted_join, multiply
+
+v = [1, 2, 3, 4]
+print(sum(v))                       # Output: 10
+print(reverse(v))                   # Output: [4, 3, 2, 1]
+print(sorted_join([1,3],[2,4]))     # Output: [1, 2, 3, 4]
+m = [[1,2],[3,4]]
+multiply(2, m)
+print(m)                            # Output: [[2, 4], [6, 8]]
+```
+
 
 ```python
 from code.imperative_programming_on_strings import count, member, is_prefix, to_uppercase, remove_vowels
@@ -183,25 +165,6 @@ print(is_prefix('ba', s))           # Output: True
 print(to_uppercase('hello'))        # Output: 'HELLO'
 print(remove_vowels('alphabet'))    # Output: 'lphbt'
 ```
-
-## Key Learnings
-
-Through these exercises in imperative programming and list comprehensions, the following concepts were practiced and reinforced:
-
-- **Iteration and Loops:** Mastery of `while` loops for traversing numbers, lists, strings, and matrices.
-- **Conditionals and Boolean Logic:** Using `if` statements and logical expressions to control flow and check conditions.
-- **Arithmetic Computation:** Implementing sums, products, factorials, Fibonacci numbers, GCD, logarithms, and other numeric operations.
-- **List Operations:** Building, modifying, reversing, and analyzing lists; filtering elements; counting occurrences; finding maxima and positions.
-- **Matrix Manipulation:** Creating zero and identity matrices, transposing, summing elements, multiplying matrices, and working with triangular structures.
-- **String Manipulation:** Traversing and modifying strings, detecting prefixes/suffixes, counting occurrences, removing vowels, converting case, reversing strings or words, and checking permutations.
-- **Function Design:** Writing modular, reusable functions that return results or modify data in place.
-- **Use of List Comprehensions:** Simplifying list creation and transformations in a declarative style for tasks like squaring numbers, filtering elements, or generating matrices.
-- **Problem Decomposition:** Breaking down larger problems (like multiplication tables, matrix products, or text transformations) into smaller, manageable steps.
-- **Algorithmic Thinking:** Understanding and implementing step-by-step logic for classical computational problems (e.g., prime detection, perfect numbers, sequences, sorting checks, and cumulative sums).
-- **Debugging and Testing:** Using examples and small test cases to verify correctness of functions and ensure expected outputs.
-
-These exercises collectively strengthen understanding of **imperative programming paradigms, basic algorithms, and data structure manipulation**, laying a solid foundation for more advanced Python programming.
-
 
 ## Testing the Code
 

@@ -9,11 +9,11 @@ Key concepts practiced include using `map`, `filter`, `reduce`, and defining hig
 
 ## Exercises Included
 
-### Higher-Order Functions
+### 1. Higher-Order Functions
 - **fixpoint(f, x)** – Applies `f` repeatedly until the result no longer changes.  
 - **iterate(f, x, n)** – Applies `f` to `x` exactly `n` times.  
 
-### List Processing
+### 2. List Processing
 - **sum(v)** – Returns the sum of elements using `reduce`.  
 - **length(v)** – Returns the length of a list using `reduce`.  
 - **remove(x, v)** – Returns a list excluding all occurrences of `x`.  
@@ -32,7 +32,7 @@ Key concepts practiced include using `map`, `filter`, `reduce`, and defining hig
 - **is_sorted(v)** – Checks if a list is sorted.  
 - **compare(v, n)** – Returns counts of elements larger than, equal to, or smaller than `n`.  
 
-### String Processing
+### 3. String Processing
 - **positions(c, s)** – Returns indices of occurrences of a character in a string.  
 - **replicate(s, v)** – Repeats characters according to a list of counts.  
 - **remove_vowels(s)** – Removes vowels from a string.  
@@ -40,11 +40,6 @@ Key concepts practiced include using `map`, `filter`, `reduce`, and defining hig
 - **to_uppercase(s) / to_lowercase(s)** – Converts string to upper or lower case.  
 - **encode_with_key(s, code)** – Encodes a string using a mapping dictionary.  
 
-## Key Learnings
-
-- Practiced **functional programming** concepts in Python.  
-- Strengthened understanding of `map`, `filter`, `reduce`, and recursion via higher-order functions.  
-- Applied functional programming to **list and string processing**, numerical computations, and algorithmic problem solving.  
 
 ## Running the Code
 

@@ -9,7 +9,7 @@ These exercises focus on applying recursive thinking to solve numerical, list-pr
 
 ## Exercises Included
 
-### Numeric Recursion
+### 1. Numeric Recursion
 - **sum_up_to(n)** – Returns the sum of natural numbers up to n.  
 - **sum_even(n)** – Returns the sum of even natural numbers up to n.  
 - **sum_between(m, n)** – Returns the sum of natural numbers between m and n.  
@@ -30,7 +30,7 @@ These exercises focus on applying recursive thinking to solve numerical, list-pr
 - **find_power(k)** – Returns the smallest n such that 2^n starts with k.
 
 
-### Recursive List Processing
+### 2. Recursive List Processing
 - **length(v)** – Returns the length of a list.  
 - **count(x, v)** – Counts the occurrences of x in a list.  
 - **member(x, v)** – Checks if x is in a list.  
@@ -55,7 +55,7 @@ These exercises focus on applying recursive thinking to solve numerical, list-pr
 - **remove(x, v)** – Returns a list excluding all occurrences of x.
 
 
-### Recursive String Processing
+### 3. Recursive String Processing
 - **count(c, s)** – Counts occurrences of a character in a string.  
 - **member(c, s)** – Checks if a character appears in a string.  
 - **is_prefix(s1, s2)** – Checks if s1 is a prefix of s2.  
@@ -76,14 +76,6 @@ These exercises focus on applying recursive thinking to solve numerical, list-pr
 - **remove_vowels(s)** – Removes all vowels from a string.  
 - **encode_with_key(s, code)** – Encodes a string using a key dictionary.  
 - **replicate(s, v)** – Repeats characters in a string according to a list of counts.
-
-
-## Key Learnings
-
-- Developed recursive solutions for numerical, list-based, and string-processing problems.  
-- Practiced breaking complex problems into smaller subproblems and defining clear base cases.  
-- Strengthened understanding of algorithmic reasoning and problem decomposition.  
-- Reinforced practical skills in number theory, list manipulation, and string algorithms.
 
 
 ## Running the Code
