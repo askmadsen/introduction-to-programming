@@ -17,7 +17,7 @@ Mini-projects / exercises include:
 - **[Recursive Programming](Academic/Semester_1/Recursive_Programming/README.md)** – Implemented recursive algorithms and practiced breaking problems into subproblems.  
 - **[Functional Programming](Academic/Semester_1/Functional_Programming/README.md)** – Exercises using higher-order functions, map/filter/reduce, and pure functional principles.  
 - **[Imperative Programming](Academic/Semester_1/Imperative_Programming/README.md)** – Code exercises using loops, conditionals, and step-by-step problem solving.  
-- **[Data Classes](Academic/Semester_1/DataClasses/README.md)** – Practiced using Python dataclasses for clean, maintainable code and structured data.
+- **[Data Classes](Academic/Semester_1/Dataclasses/README.md)** – Practiced using Python dataclasses for clean, maintainable code and structured data.
 - **[Small Projects](Academic/Semester_1/Small_Projects/README.md)** – Practiced implementing classic algorithms and numerical methods, including primes, integrals, root finding, and Pascal’s triangle.
 
 **Technologies Used**
