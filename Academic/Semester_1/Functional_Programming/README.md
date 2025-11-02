@@ -3,10 +3,6 @@
 This folder contains exercises completed during the **Introduction to Programming** course in Semester 1, focusing on **functional programming** techniques in Python.  
 Key concepts practiced include using `map`, `filter`, `reduce`, and defining higher-order functions like `fixpoint` and `iterate`.
 
-## Requirements
-- Python 3.10+
-- Standard libraries only
-
 ## Exercises Included
 
 ### 1. Higher-Order Functions

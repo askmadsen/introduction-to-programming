@@ -3,10 +3,6 @@
 This folder contains exercises and small projects exploring the use of **dataclasses** in Python.  
 These projects implement abstractions for points, polygons, timestamps and dates, demonstrating object-oriented design with simple data structures.
 
-## Requirements
-- Python 3.10+
-- Standard libraries only
-
 ## Modules Included
 
 ### 1. Point2D

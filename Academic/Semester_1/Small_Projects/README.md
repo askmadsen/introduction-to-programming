@@ -3,10 +3,6 @@
 This folder contains small programming projects completed during the **Introduction to Programming** course.  
 These projects explore numerical algorithms, mathematical computations, and basic numerical methods.
 
-## Requirements
-- Python 3.10+
-- Standard libraries only
-
 ## Projects Included
 
 ### Prime Numbers

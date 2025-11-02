@@ -3,11 +3,6 @@
 This folder contains exercises exploring **imperative programming** in Python.  
 The exercises cover numbers, lists, strings, and use constructs like loops, conditionals, and list comprehensions.
 
----
-
-## Requirements
-- Python 3.10+
-- Standard libraries only
 
 ## Exercises Included
 

@@ -3,10 +3,6 @@
 This folder contains recursion exercises completed during my **Introduction to Programming** course in Semester 1 of my computer science degree.  
 These exercises focus on applying recursive thinking to solve numerical, list-processing, and string manipulation problems without relying on Python’s built-in libraries.
 
-## Requirements
-- Python 3.10+
-- Standard libraries only
-
 ## Exercises Included
 
 ### 1. Numeric Recursion

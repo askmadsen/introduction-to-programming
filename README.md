@@ -21,7 +21,7 @@ Mini-projects / exercises include:
 - **[Small Projects](Academic/Semester_1/Small_Projects/README.md)** – Practiced implementing classic algorithms and numerical methods, including primes, integrals, root finding, and Pascal’s triangle.
 
 **Technologies Used**
-- Python 3.11+
+- Python 3.10+
 - Standard library (no external dependencies)
 
 **Skills Demonstrated**
