@@ -5,6 +5,10 @@ The exercises cover numbers, lists, strings, and use constructs like loops, cond
 
 ---
 
+## Requirements
+- Python 3.10+
+- Standard libraries only
+
 ## List Comprehensions
 
 This module contains exercises using Python **list comprehensions** to perform common operations on numbers, lists, and strings.
@@ -30,15 +34,15 @@ This module contains exercises using Python **list comprehensions** to perform c
 ### Example Usage
 
 ```python
-from code.imperative import list_comprehensions as lc
+from code.list_comprehensions import squares, remove, multiplication_table
 
-print(lc.squares(6))  
+print(squares(6))  
 # Output: [1, 4, 9, 16, 25, 36]
 
-print(lc.remove(1, [1,2,1,4,1,3,1]))  
+print(remove(1, [1,2,1,4,1,3,1]))  
 # Output: [2, 4, 3]
 
-print(lc.multiplication_table(4))  
+print(multiplication_table(4))  
 # Output: [[1, 2, 3, 4], [2, 4, 6, 8], [3, 6, 9, 12], [4, 8, 12, 16]]
 ```
 
@@ -69,13 +73,13 @@ The functions demonstrate loops, conditionals, and arithmetic operations.
 ### Example Usage
 
 ```python
-from code.imperative_numbers import numbers  # assuming your file is numbers.py
+from code.imperative_programming_on_numbers import sum_up_to, factorial, is_prime, nth_prime, gcd
 
-print(numbers.sum_up_to(10))       # Output: 55
-print(numbers.factorial(5))        # Output: 120
-print(numbers.is_prime(7))         # Output: True
-print(numbers.nth_prime(5))        # Output: 11
-print(numbers.gcd(24, 36))         # Output: 12
+print(sum_up_to(10))       # Output: 55
+print(factorial(5))        # Output: 120
+print(is_prime(7))         # Output: True
+print(nth_prime(5))        # Output: 11
+print(gcd(24, 36))         # Output: 12
 ```
 
 
@@ -131,15 +135,15 @@ Functions demonstrate iteration, indexing, conditionals, and basic list manipula
 ### Example Usage
 
 ```python
-from code.imperative_lists import lists  # assuming your file is lists.py
+from code.imperative_programming_on_lists import sum, reverse, sorted_join, multiply
 
 v = [1, 2, 3, 4]
-print(lists.sum(v))                  # Output: 10
-print(lists.reverse(v))              # Output: [4, 3, 2, 1]
-print(lists.sorted_join([1,3],[2,4]))# Output: [1,2,3,4]
+print(sum(v))                       # Output: 10
+print(reverse(v))                   # Output: [4, 3, 2, 1]
+print(sorted_join([1,3],[2,4]))     # Output: [1, 2, 3, 4]
 m = [[1,2],[3,4]]
-lists.multiply(2, m)
-print(m)                             # Output: [[2, 4], [6, 8]]
+multiply(2, m)
+print(m)                            # Output: [[2, 4], [6, 8]]
 ```
 
 
@@ -170,14 +174,14 @@ Functions demonstrate iteration, indexing, conditionals, and string manipulation
 ### Example Usage
 
 ```python
-from code.imperative_strings import strings  # assuming your file is strings.py
+from code.imperative_programming_on_strings import count, member, is_prefix, to_uppercase, remove_vowels
 
 s = 'banana'
-print(strings.count('a', s))            # Output: 3
-print(strings.member('x', s))           # Output: False
-print(strings.is_prefix('ba', s))       # Output: True
-print(strings.to_uppercase('hello'))    # Output: 'HELLO'
-print(strings.remove_vowels('alphabet'))# Output: 'lphbt'
+print(count('a', s))                # Output: 3
+print(member('x', s))               # Output: False
+print(is_prefix('ba', s))           # Output: True
+print(to_uppercase('hello'))        # Output: 'HELLO'
+print(remove_vowels('alphabet'))    # Output: 'lphbt'
 ```
 
 ## Key Learnings
@@ -206,11 +210,11 @@ All functions include docstrings with usage examples. You can automatically test
 From the terminal, navigate to the `code/` folder and run:
 
 ```bash
-python -m doctest -v List_comprehensions.py
+python -m doctest -v list_comprehensions.py
 
-python -m doctest -v Imperative_programming_on_numbers.py
+python -m doctest -v imperative_programming_on_numbers.py
 
-python -m doctest -v Imperative_programming_on_lists.py
+python -m doctest -v imperative_programming_on_lists.py
 
-python -m doctest -v Imperative_programming_on_strings.py
+python -m doctest -v imperative_programming_on_strings.py
 ```

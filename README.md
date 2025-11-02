@@ -20,6 +20,16 @@ Mini-projects / exercises include:
 - **[Data Classes](Academic/Semester_1/DataClasses/README.md)** – Practiced using Python dataclasses for clean, maintainable code and structured data.
 - **[Small Projects](Academic/Semester_1/Small_Projects/README.md)** – Practiced implementing classic algorithms and numerical methods, including primes, integrals, root finding, and Pascal’s triangle.
 
+**Technologies Used**
+- Python 3.11+
+- Standard library (no external dependencies)
+
+**Skills Demonstrated**
+- Recursive, functional, and imperative programming  
+- Algorithmic thinking and problem decomposition  
+- Basic object-oriented design using data classes  
+- Discipline in coding without relying on in-built librarie
+
 ---
 
 ## Personal Projects
@@ -27,13 +37,6 @@ Mini-projects / exercises include:
 
 ---
 
-## Skills Demonstrated
-- Recursive, functional, and imperative programming  
-- Algorithmic thinking and problem decomposition  
-- Basic object-oriented design using data classes  
-- Discipline in coding without relying on in-built libraries
-
----
 
 ## Links
 - [LinkedIn](https://www.linkedin.com/in/yourprofile)  

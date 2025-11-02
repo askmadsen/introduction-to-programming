@@ -86,7 +86,7 @@ def contains(s1: str, s2: str) -> bool:
 def to_uppercase(s: str) -> str:
     """ Converts s to uppercase.
     >>> to_uppercase('hey')
-    'HEY'  
+    'HEY'
     """
     upper = ''
     i = 0
@@ -118,7 +118,7 @@ def to_lowercase(s: str) -> str:
 def toCamelCase(s: str) -> str:
     """ Converts s to camel notation.
     >>> toCamelCase('hey you')
-    'heyYou
+    'heyYou'
     """
     camel_case = ''
     i = 0
@@ -131,6 +131,7 @@ def toCamelCase(s: str) -> str:
             i = i + 2
         else:
             camel_case = camel_case + s[i]
+            i = i + 1
     return camel_case
 
 
@@ -175,7 +176,7 @@ def last_position(c: str, s: str) -> int:
 def positions(c: str, s: str) -> list[int]:
     """ Returns a list with the indices of the occurrences of c in s.
     >>> positions('a', 'banana')
-    [1, 3, 5]    
+    [1, 3, 5]
     """
     positions = []
     i = 0
@@ -234,12 +235,12 @@ def reverse_words(s: str) -> str:
         else:
             word = word + s[i]
         i = i + 1
-        words.append(word)
-        j = 0
-        while j < len(words):
-            reverse_words = reverse_words + reverse(words[j]) + ' '
-            j = j + 1
-        return reverse_words
+    words.append(word)
+    j = 0
+    while j < len(words):
+        reverse_words = reverse_words + reverse(words[j]) + ' '
+        j = j + 1
+    return reverse_words[:-1]
     
 
 def remove_vowels(s: str) -> str:
@@ -257,7 +258,7 @@ def remove_vowels(s: str) -> str:
 
 
 def respace(s: str, n: int) -> str:
-    """ Removes all spaces from s and the adding a space after every n characters.
+    """ Removes all spaces from s and the adds a space after every n characters.
     >>> respace('abcdefg', 3)
     'abc def g'
     """
@@ -272,5 +273,6 @@ def respace(s: str, n: int) -> str:
     while j < len(words):
         respace = respace + words[j]
         if (j + 1) % n == 0:
-            respace = respace + ''
+            respace = respace + ' '
+        j = j + 1
     return respace

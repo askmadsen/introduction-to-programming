@@ -3,6 +3,10 @@
 This folder contains exercises completed during the **Introduction to Programming** course in Semester 1, focusing on **functional programming** techniques in Python.  
 Key concepts practiced include using `map`, `filter`, `reduce`, and defining higher-order functions like `fixpoint` and `iterate`.
 
+## Requirements
+- Python 3.10+
+- Standard libraries only
+
 ## Exercises Included
 
 ### Higher-Order Functions
@@ -48,7 +52,7 @@ All exercises are contained in `code/`. Each function can be imported and tested
 Example:
 
 ```python
-from code.Functional_programming import factorial, sum, to_uppercase
+from code.functional_programming import factorial, sum, to_uppercase
 
 print(factorial(5))  # Output: 120
 print(sum([1,2,3]))  # Output: 6
@@ -63,5 +67,5 @@ All functions include docstrings with usage examples. You can automatically test
 From the terminal, navigate to the `code/` folder and run:
 
 ```bash
-python -m doctest -v Functional_programming.py
+python -m doctest -v functional_programming.py
 ```

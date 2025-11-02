@@ -1,4 +1,4 @@
-import point2d as p2d
+import code.point2d as p2d
 
 Polygon = list[p2d.Point2D]
 

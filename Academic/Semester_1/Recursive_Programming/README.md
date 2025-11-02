@@ -3,6 +3,9 @@
 This folder contains recursion exercises completed during my **Introduction to Programming** course in Semester 1 of my computer science degree.  
 These exercises focus on applying recursive thinking to solve numerical, list-processing, and string manipulation problems without relying on Python’s built-in libraries.
 
+## Requirements
+- Python 3.10+
+- Standard libraries only
 
 ## Exercises Included
 
@@ -89,9 +92,9 @@ All exercises are contained in `code/`. Each function can be imported and tested
 Example:
 
 ```python
-from code.Recursive_programming_with_numbers import factorial
-from code.Recursive_programming_with_lists import length
-from code.Recursive_programming_with_strings import reverse
+from code.recursive_programming_with_numbers import factorial
+from code.recursive_programming_with_lists import length
+from code.recursive_programming_with_strings import reverse
 
 print(factorial(5))  # Output: 120
 print(length([1,2,3]))  # Output: 3
@@ -106,9 +109,9 @@ All functions include docstrings with usage examples. You can automatically test
 From the terminal, navigate to the `code/` folder and run:
 
 ```bash
-python -m doctest -v Recursive_programming_with_numbers.py
+python -m doctest -v recursive_programming_with_numbers.py
 
-python -m doctest -v Recursive_programming_with_lists.py
+python -m doctest -v recursive_programming_with_lists.py
 
-python -m doctest -v Recursive_programming_with_strings.py
+python -m doctest -v recursive_programming_with_strings.py
 ```

@@ -3,6 +3,10 @@
 This folder contains exercises and small projects exploring the use of **dataclasses** in Python.  
 These projects implement abstractions for points, polygons, timestamps and dates, demonstrating object-oriented design with simple data structures.
 
+## Requirements
+- Python 3.10+
+- Standard libraries only
+
 ## Modules Included
 
 ### 1. Point2D
@@ -20,7 +24,7 @@ Defines a 2D point with `x` and `y` coordinates and provides utility functions.
 
 #### Example:
 ```python
-from code import point2d as p2d
+import code.point2d as p2d
 
 p = p2d.make_point(1, 2)
 q = p2d.make_point(4, 6)
@@ -48,7 +52,7 @@ Represents a polygon as a list of Point2D vertices and provides geometric utilit
 #### Example
 
 ```python
-from code import polygon
+import code.polygon as polygon
 
 vertices = [p2d.make_point(0,0), p2d.make_point(1,0), p2d.make_point(0,1)]
 poly = polygon.make_polygon(vertices)
@@ -75,7 +79,7 @@ Represents a time of day with hours, minutes, and seconds.
 #### Example:
 
 ```python
-from code import timestamp as ts
+import code.timestamp as ts
 
 t = ts.make_timestamp(23, 59, 50)
 ts.iterate_each_second(t, 15)  # Prints next 15 seconds, wrapping over to next hour/day if needed
@@ -99,8 +103,8 @@ Represents a calendar date with year, month, day, and a TimeStamp.
 #### Example:
 
 ```python
-from code import date
-from code import timestamp as ts
+import code.date as date
+import code.timestamp as ts
 
 d = date.make_date(2025, 11, 2)
 print(date.to_string(d))  # Output: "2025-11-02(00:00:00)"
