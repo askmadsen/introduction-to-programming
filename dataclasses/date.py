@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-import code.timestamp as ts
+import timestamp as ts
 
 @dataclass
 class Date:

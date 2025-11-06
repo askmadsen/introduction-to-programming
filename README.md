@@ -1,43 +1,43 @@
-# My Project Portfolio
+# Introduction to Programming
 
-Welcome to my portfolio! 👋  
-This repository showcases the projects and coding exercises I have completed during my computer science degree, along with personal projects developed independently.  
+This repository contains solutions to exercises from the Introduction to Programming course in the python programming language.
 
-The portfolio is organized by semester for academic work and by category for personal projects. Each project folder contains a README with a description, instructions for running the code, and any reports or notes.
+## Course Material
+- [Exercises PDF](exercises.pdf)
 
----
+## Exercise Categories
 
-## Academic Projects
+### Recursion
+- [2 Recursive programming with numbers](recursion/numbers.py)
+- [3 Recursive programming with lists](recursion/lists.py)
+- [4 Recursive programming with strings](recursion/strings.py)
 
-### Semester 1 – Introduction to Programming
-During my first semester, I focused on foundational programming concepts and exercises. While no full-scale projects were completed, these exercises demonstrate my grasp of various programming paradigms and coding fundamentals.
+### Functional Programming
+- [5 Functional programming](functional/functional.py)
 
-Mini-projects / exercises include:
+### Imperative Programming
+- [6 List comprehension](imperative/list_comprehensions.py)
+- [8 Imperative programming on numbers](imperative/numbers.py)
+- [9 Imperative programming on lists](imperative/lists.py)
+- [10 Imperative programming on strings](imperative/strings.py)
 
-- **[Recursive Programming](Academic/Semester_1/Recursive_Programming/README.md)** – Implemented recursive algorithms and practiced breaking problems into subproblems.  
-- **[Functional Programming](Academic/Semester_1/Functional_Programming/README.md)** – Exercises using higher-order functions, map/filter/reduce, and pure functional principles.  
-- **[Imperative Programming](Academic/Semester_1/Imperative_Programming/README.md)** – Code exercises using loops, conditionals, and step-by-step problem solving.  
-- **[Data Classes](Academic/Semester_1/Dataclasses/README.md)** – Practiced using Python dataclasses for clean, maintainable code and structured data.
-- **[Small Projects](Academic/Semester_1/Small_Projects/README.md)** – Practiced implementing classic algorithms and numerical methods, including primes, integrals, root finding, and Pascal’s triangle.
+### Small Projects
+- [7 Small projects I](small_projects/small_projects_1.py)
+- [11 Small projects II](small_projects/small_projects_2.py)
 
-**Technologies Used**
-- Python 3.10+
-- Standard library (no external dependencies)
-
-**Skills Demonstrated**
-- Recursive, functional, and imperative programming  
-- Algorithmic thinking and problem decomposition  
-- Basic object-oriented design using data classes  
-- Discipline in coding without relying on in-built librarie
-
----
-
-## Personal Projects
-*(To be added)*
-
----
+### Dataclasses
+- [Timestamp](dataclasses/timestamp.py)
+- [Date](dataclasses/date.py)
+- [Point2d](dataclasses/point2d.py)
+- [Polygon](dataclasses/polygon.py)
 
 
-## Links
-- [LinkedIn](https://www.linkedin.com/in/yourprofile)  
-- [Email](mailto:your.email@example.com)
+## Running Tests
+
+You can run tests in different scopes:
+
+- Run all tests: `python run.py`
+- Run all tests in a folder: `python run.py --folder recursion`
+- Run a single file: `python run.py --folder recursion --file test_numbers.py`
+- Run a single function: `python run.py --folder recursion --file test_numbers.py --func test_sum_between`
+
