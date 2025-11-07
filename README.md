@@ -25,11 +25,11 @@ This repository contains solutions to exercises from the Introduction to Program
 - [7 Small projects I](small_projects/small_projects_1.py)
 - [11 Small projects II](small_projects/small_projects_2.py)
 
-### Dataclasses
-- [Timestamp](dataclasses/timestamp.py)
-- [Date](dataclasses/date.py)
-- [Point2d](dataclasses/point2d.py)
-- [Polygon](dataclasses/polygon.py)
+### Datatypes
+- [Timestamp](datatypes/timestamp.py)
+- [Date](datatypes/date.py)
+- [Point2d](datatypes/point2d.py)
+- [Polygon](datatypes/polygon.py)
 
 
 ## Running Tests
