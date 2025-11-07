@@ -1,13 +1,7 @@
-from typing import List
-
-# Recursion with strings
-
+# 4 Recursive programming with strings
 
 def count(c: str, s: str) -> int:
-    """ Returnd the number of times c appears in s.
-    >>> count('a', 'man')
-    1
-    """
+    """ Returnd the number of times c appears in s."""
     if s == '':
         return 0
     elif c == s[0]:
@@ -15,14 +9,8 @@ def count(c: str, s: str) -> int:
     else:
         return count(c, s[1:])
 
-
 def member(c: str, s: str) -> bool:
-    """ Checks wether c appears in s.
-    >>> member('a', 'apple')
-    True
-    >>> member('b', 'apple')
-    False
-    """
+    """ Checks wether c appears in s."""
     if s == '':
         return False
     elif s[0] == c:
@@ -30,53 +18,38 @@ def member(c: str, s: str) -> bool:
     else:
         return member(c, s[1:])
 
-
 def is_prefix(s1: str, s2: str) -> bool:
-    """ Checks if s1 is a prefix of s2.
-    >>> is_prefix('ap', 'apple')
-    True
-    >>> is_prefix('ad', 'apple')
-    False
-    """
+    """ Checks if s1 is a prefix of s2."""
     return s1 == '' or (s1[0] == s2[0] and is_prefix(s1[1:], s2[1:]))
 
-
 def is_suffix(s1: str, s2: str) -> bool:
-    """ Checks if s1 is a suffix of s2.
-    >>> is_suffix('ple', 'apple')
-    True
-    >>> is_suffix('ap', 'apple')
-    False
-    """
+    """ Checks if s1 is a suffix of s2."""
     return s1 == '' or (s1[-1] == s2[-1] and is_suffix(s1[:-1], s2[:-1]))
 
-
-
 def is_substring(s1: str, s2: str) -> bool:
-    """ Checks if s1 is a substring of s2.
-    >>> is_substring('al', 'apple')
-    True
-    >>> is_substring('ad', 'apple')
-    False
-    """
-    return s1 == '' or (member(s1[0], s2) and is_substring(s1[1:], s2))
-
+    """ Checks if s1 is a substring of s2."""
+    if s1 == '':
+        return True
+    elif len(s2) < len(s1):
+        return False
+    elif is_prefix(s1, s2):
+        return True
+    else:
+        return is_substring(s1, s2[1:])
 
 def contains(s1: str, s2: str) -> bool:
-    """ Checks if s2 can be obtained from s1 by deleting some characters.
-    >>> contains('abbce', 'abce')
-    True
-    >>> contains('acce', 'abce')
-    False
-    """
-    return is_substring(s2, s1)
-
+    """Checks if s2 can be obtained from s1 by deleting some characters."""
+    if s2 == '':
+        return True
+    elif s1 == '':
+        return False
+    elif s1[0] == s2[0]:
+        return contains(s1[1:], s2[1:])
+    else:
+        return contains(s1[1:], s2)
 
 def caesar_code(s: str, n: int) -> str:
-    """ Increases the ASCII code of each character in s by n.
-    >>> caesar_code('abcd', 1)
-    'bcde'
-    """
+    """ Increases the ASCII code of each character in s by n."""
     if s == '':
         return ''
     elif ord(s[0]) < 97: #checks if the character is upper case
@@ -90,38 +63,31 @@ def caesar_code(s: str, n: int) -> str:
         else:
             return chr(ord(s[0]) + n) + caesar_code(s[1:], n)
 
-
 def to_uppercase(s: str) -> str:
-    """ Converts the string s to uppercase (ignoring alle non-alphabetic characters).
-    >>> to_uppercase('aBcd')
-    'ABCD'
-    """
+    """ Converts the string s to uppercase (ignoring alle non-alphabetic characters)."""
     if s == '':
         return ''
-    elif ord(s[0]) < 97:
-        return s[0] + to_uppercase(s[1:])
+    c = s[0]
+    # Only convert lowercase letters
+    if 'a' <= c <= 'z':
+        return chr(ord(c) - 32) + to_uppercase(s[1:])
     else:
-        return chr(ord(s[0]) - 32) + to_uppercase(s[1:])
+        return c + to_uppercase(s[1:])
         
-
 def to_lowercase(s: str) -> str:
-    """ Converts the string S to lowercase (ignoring all non-alphabetic characters).
-    >>> to_lowercase('AcDB')
-    'acdb'
-    """
+    """Converts the string s to lowercase (ignoring all non-alphabetic characters)."""
     if s == '':
         return ''
-    elif ord(s[0]) < 97:
-        return chr(ord(s[0]) + 32) + to_lowercase(s[1:])
+    c = s[0]
+    # Only convert uppercase letters
+    if 'A' <= c <= 'Z':
+        return chr(ord(c) + 32) + to_lowercase(s[1:])
     else:
-        return s[0] + to_lowercase(s[1:])
-    
+        return c + to_lowercase(s[1:])
 
+    
 def toCamelCase(s: str) -> str:
-    """ Converts a string of text to camel notation.
-    >>> toCamelCase('hello my friend')
-    'helloMyFriend'
-    """
+    """ Converts a string of text to camel notation."""
     if s == '':
         return ''
     elif s[0] == ' ':
@@ -129,14 +95,8 @@ def toCamelCase(s: str) -> str:
     else:
         return s[0] + toCamelCase(s[1:])
 
-
 def equals_ignore_case(s1: str, s2: str) -> bool:
-    """ Determines if s1 and s2 are equal up to change of base.
-    >>> equals_ignore_case('AbCd', 'aBcD')
-    True
-    >>> equals_ignore_case('AbCd', 'bACd')
-    False
-    """
+    """ Determines if s1 and s2 are equal up to change of base."""
     if (s1 and s2) == '':
         return True
     elif to_uppercase(s1[0]) == to_uppercase(s2[0]):
@@ -144,14 +104,8 @@ def equals_ignore_case(s1: str, s2: str) -> bool:
     else:
         return False
 
-
 def first_position(c: str, s: str) -> int:
-    """ Returns the index of the first occurrence of c in s, -1 if not found.
-    >>> first_position('a', 'banana')
-    1
-    >>> first_position('a', 'hut')
-    -1
-    """
+    """ Returns the index of the first occurrence of c in s, -1 if not found."""
     return _first_position(c,s)
 
 def _first_position(c: str, s: str, i: int = 0) -> int:
@@ -162,14 +116,8 @@ def _first_position(c: str, s: str, i: int = 0) -> int:
     else:
         return _first_position(c,s, i + 1)
 
-
 def last_position(c: str, s: str) -> int:
-    """ Return the index of the last occurrence of c in s, -1 if not found.
-    >>> last_position('a', 'banana')
-    5
-    >>> last_position('a', 'hut')
-    -1
-    """
+    """ Return the index of the last occurrence of c in s, -1 if not found."""
     return _last_position(c,s)
 
 def _last_position(c: str, s: str, i: int = -1) -> int:
@@ -180,17 +128,11 @@ def _last_position(c: str, s: str, i: int = -1) -> int:
     else:
         return _last_position(c,s, i - 1)
 
-
-def positions(c: str, s: str) -> List[int]:
-    """ Returns a list with the indices of the occurrences of c in s.
-    >>> positions('a', 'banana')
-    [1, 3, 5]
-    >>> positions('a', 'hut')
-    []
-    """
+def positions(c: str, s: str) -> list[int]:
+    """ Returns a list with the indices of the occurrences of c in s."""
     return _positions(c,s)
 
-def _positions(c: str, s: str, i: int = 0) -> List[int]:
+def _positions(c: str, s: str, i: int = 0) -> list[int]:
     if s[i:] == '':
         return []
     elif c == s[i]:
@@ -198,16 +140,9 @@ def _positions(c: str, s: str, i: int = 0) -> List[int]:
     else:
         return _positions(c, s, i + 1)
             
-
 def is_permutation(s1: str, s2: str) -> bool:
-    """ Checks if s1 and s2 contains exactly the same characters counting repetitions.
-    >>> is_permutation('abbcccc', 'ccbabcc')
-    True
-    >>> is_permutation('aabdcc', 'baacd')
-    False
-    """
+    """ Checks if s1 and s2 contains exactly the same characters counting repetitions."""
     return _is_permutation(s1, s2)
-
 
 def _is_permutation(s1: str, s2: str, i: int = 0) -> bool:
     if s1[i:] == s2[i:] == '':
@@ -217,26 +152,18 @@ def _is_permutation(s1: str, s2: str, i: int = 0) -> bool:
     else:
         return False
 
-
 def reverse(s: str) -> str:
-    """ Reverses the string s.
-    >>> reverse('abc')
-    'cba'
-    """
+    """ Reverses the string s."""
     if s == '':
         return ''
     else:
         return s[-1] + reverse(s[:-1])
     
-
 def reverse_words(s: str) -> str:
-    """ Reverses the words in s (preserving their order).
-    >>> reverse_words('hey you')
-    'yeh uoy'
-    """
+    """ Reverses the words in s (preserving their order)."""
     return _reverse_words(s)
 
-def split(s: str, j: int = 0, i: int = 1) -> List[str]:
+def split(s: str, j: int = 0, i: int = 1) -> list[str]:
     if s[i:] == '':
         return [s[j:i]] # returns the last word in s
     elif s[i] == ' ':
@@ -250,12 +177,8 @@ def _reverse_words(s: str, k: int = 0) -> str:
     else:
         return reverse(split(s)[k]) + ' ' + _reverse_words(s, k + 1)
     
-
 def remove_vowels(s: str) -> str:
-    """ Removes the vowels of s.
-    >>> remove_vowels('abcde')
-    'bcd'
-    """
+    """ Removes the vowels of s."""
     if s == '':
         return ''
     elif member(s[0], 'aAeEiIoOuUyY'):
@@ -263,23 +186,15 @@ def remove_vowels(s: str) -> str:
     else:
         return s[0] + remove_vowels(s[1:])
 
-
 def encode_with_key(s: str, code: dict[str, str]) -> str:
-    """ Encodes s with key.
-    >>> encode_with_key('KYE', {'K' : 'o', 'Y' : 'l', 'E' : 't'})
-    'olt'
-    """
+    """ Encodes s with key."""
     if s == '':
         return ''
     else:
-        return code[s[0]] + encode_with_key(s[1:], code)
-    
+        return code.get(to_uppercase(s[0]), s[0]) + encode_with_key(s[1:], code)
 
 def replicate(s: str, v: list[int]) -> str:
-    """ Returns a string containing v[i] copies of s[i] given that len(s) == len(v).
-    >>> replicate('abc', [1,2,3])
-    'abbccc'
-    """
+    """ Returns a string containing v[i] copies of s[i] given that len(s) == len(v)."""
     if s == '':
         return ''
     else:

@@ -34,10 +34,92 @@ This repository contains solutions to exercises from the Introduction to Program
 
 ## Running Tests
 
-You can run tests in different scopes:
+IMPORTANT TO MENTION THAT ANY FUNCTIONS NOT IMPLEMENTED IS SIMPLY SKIPPED AND WILL NOT CAUSE AN ERROR
 
-- Run all tests: `python run.py`
-- Run all tests in a folder: `python run.py --folder recursion`
-- Run a single file: `python run.py --folder recursion --file test_numbers.py`
-- Run a single function: `python run.py --folder recursion --file test_numbers.py --func test_sum_between`
+This project uses **[pytest](https://docs.pytest.org/)** as the testing framework together with **JSON-driven test cases**.  
+Each main exercise folder (e.g. `recursion/`, `functional/`, `imperative/`, etc.) contains a `tests/` subfolder with:  
 
+- a `test_*.py` file — the actual pytest test code  
+- a `test_*_cases.json` file — the test input/output data  
+
+
+### Commands and usage
+
+You can run tests in different scopes using the provided `run.py` helper:
+
+| Scope | Command | Description |
+|--------|----------|-------------|
+| **All tests** | `python run.py` | Runs every test in the repository. |
+| **A specific folder** | `python run.py --folder recursion` | Runs all tests in the *recursion* module. |
+| **A specific test file** | `python run.py --folder recursion --file test_numbers.py` | Runs tests only for that file. |
+| **A specific function** | `python run.py --folder recursion --file test_numbers.py --func test_sum_between` | Runs only tests for that function. |
+
+
+### JSON test cases
+
+Each test file loads its input and expected output values from a JSON file, making it easy to extend or modify tests without touching the Python code.
+
+#### Example — recursion/tests/test_numbers_cases.json
+```json
+"sum_up_to": [
+    [0, 0],
+    [1, 1],
+    [5, 15]
+],
+
+"sum_even": [
+    [7, 12],
+    [17, 72],
+    [40, 420]
+],
+
+"sum_between": [
+  [[1, 5], 15],
+  [[3, 7], 25] 
+]
+```
+Each entry is a list of test cases:
+
+[[input_values], expected_output]
+
+For example:
+
+- [[5], 15] → calls sum_up_to(5) and checks that the result equals 15.
+
+- [[3, 7], 25] → calls sum_between(3, 7) and checks that the result equals 25.
+
+
+### Adding new test inputs
+
+To add new tests, simply extend the JSON arrays with more input/output pairs.
+
+For instance, to add another case for sum_up_to:
+
+```json
+"sum_up_to": [
+    [0, 0],
+    [1, 1],
+    [5, 15],
+    [10, 55]   // New test case
+]
+```
+
+Save the file and rerun your tests without the need to change the Python test file. 
+
+
+### Adding a new function to the test framework
+
+
+1. Implement the new function in the relevant module file (e.g. recursion/numbers.py)
+2. Add test cases for it to the matching JSON file.
+3. Add a corresponding test block in the test_*.py file, for example:
+
+```python
+@pytest.mark.parametrize("inp,expected", cases["new_function"])
+def test_new_function(inp, expected):
+    if not hasattr(numbers, "new_function"):
+        pytest.skip("new_function() not implemented yet")
+    assert numbers.new_function(*inp) == expected
+```
+
+Also mention that *inp is for function with multiple inputs whereas inp is for functions that only takes 1 input argument

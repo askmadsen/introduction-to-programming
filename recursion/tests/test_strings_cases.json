@@ -1,0 +1,135 @@
+{
+
+"count": [
+    [["c", "cat"], 1],
+    [["a", "banana"], 3],
+    [["p", "apple"], 2]
+],
+
+"member": [
+    [["c", "cat"], true],
+    [["a", "banana"], true],
+    [["i", "apple"], false]
+],
+
+"is_prefix": [
+    [["ca", "cat"], true],
+    [["baa", "banana"], false],
+    [["appl", "apple"], true]
+],
+
+"is_suffix": [
+    [["ca", "cat"], false],
+    [["ana", "banana"], true],
+    [["pple", "apple"], true]
+],
+
+"is_substring": [
+    [["ca", "cat"], true],
+    [["ana", "banana"], true],
+    [["plle", "apple"], false]
+],
+
+"contains": [
+    [["cat", "ca"], true],
+    [["baannana", "banana"], true],
+    [["pplle", "apple"], false]
+],
+
+"caesar_code": [
+    [["banana", 1], "cbobob"],
+    [["banana", 2], "dcpcpc"],
+    [["banana", 3], "edqdqd"]
+],
+
+"to_uppercase": [
+    ["ban!ana", "BAN!ANA"],
+    ["Chill", "CHILL"],
+    ["UppErCaSe?", "UPPERCASE?"]
+],
+
+"to_lowercase": [
+    ["ban!Ana", "ban!ana"],
+    ["Chill", "chill"],
+    ["UppErCaSe?", "uppercase?"]
+],
+
+"toCamelCase": [
+    ["hello you", "helloYou"],
+    ["hi there", "hiThere"],
+    ["have a good day", "haveAGoodDay"]
+],
+
+"equals_ignore_case": [
+    [["hello You", "hello you"], true],
+    [["hi there", "hi TheRe"], true],
+    [["have a good day", "have aa Good Day"], false]
+],
+
+"first_position": [
+    [["o", "hello you"], 4],
+    [["a", "hi TheRe"], -1],
+    [["A", "have aa Good DAy"], 14]
+],
+
+"last_position": [
+    [["o", "hello you"], 7],
+    [["a", "hi TheRe"], -1],
+    [["a", "have aa Good DAy"], 6]
+],
+
+"positions": [
+    [["o", "hello you"], [4,7]],
+    [["a", "hi TheRe"], []],
+    [["a", "have aa Good DAy"], [1,5,6]]
+],
+
+"is_permutation": [
+    [["hello", "olleh"], true],
+    [["aaklopqss", "klaposaqs"], true],
+    [["ignlakt", "klanting"], false]
+],
+
+"reverse": [
+    ["hello", "olleh"],
+    ["pulley", "yellup"],
+    ["intact", "tcatni"]
+],
+
+"reverse_words": [
+    ["hello there", "olleh ereht"],
+    ["pulley system", "yellup metsys"],
+    ["intact cable", "tcatni elbac"]
+],
+
+"remove_vowels": [
+    ["hello there", "hll thr"],
+    ["pulley system", "pll sstm"],
+    ["intact cable", "ntct cbl"]
+],
+
+"respace": [
+    [["hello there", 2], "he ll ot he re"],
+    [["pulley system", 4], "pull eysy stem"],
+    [["intact cable", 5], "intac tcabl e"]
+],
+
+"encode_with_key": [
+  [["AbC!", {"A":"X", "B":"Y", "C":"Z"}], "XYZ!"],
+  [["hello", {"H":"Q", "E":"W", "L":"E", "O":"R"}], "QWEER"],
+  [["123!", {"A":"M", "B":"N"}], "123!"]
+],
+
+"histogram": [
+  ["aAbC!eQFqFGEff", {"A":2, "B":1, "C":1, "E":2, "Q":2, "F":4, "G":1}],
+  ["hello", {"H":1, "E":1, "L":2, "O":1}],
+  ["123!aqbQaBaQaqqBAB", {"A":5, "Q":5, "B":4}]
+],
+
+"replicate": [
+  [["abcd", [1,2,3,4]], "abbcccdddd"],
+  [["abcd", [4,3,2,1]], "aaaabbbccd"],
+  [["abcd", [2,1,4,3]], "aabccccddd"]
+]
+
+}
