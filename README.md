@@ -156,14 +156,16 @@ Save the file and rerun your tests without the need to change the Python test fi
 ]
 ```
 
-3. Add a corresponding test block in the test_*.py file, for example:
+3. Add a corresponding test block in the test_*.py file, assuming that the desired module has been imported as module:
 
 ```python
+import my_module as module  # Replace `my_module` with the actual module name
+
 @pytest.mark.parametrize("inp,expected", cases["new_function"])
 def test_new_function(inp, expected):
-    if not hasattr(numbers, "new_function"):
+    if not hasattr(module, "new_function"):
         pytest.skip("new_function() not implemented yet")
-    assert numbers.new_function(*inp) == expected
+    assert module.new_function(*inp) == expected
 ```
 
 - Use *inp when the function takes multiple arguments (as shown above).
